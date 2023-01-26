@@ -1,0 +1,20 @@
+﻿@page
+@model Moment1._1.Pages.AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<h2>Om sidan</h2>
+<p> Moment 1.1 </p>
+<p>Denna sida är en uppift i kursen DT191G-Webbutveckling med .NET </p>
+<p>Syftet emd uppgiften är att få en grundläggande uppfattning om olika begrepp
+    ochtekniker inom ASp.net Core. <br />
+    Sidan består av tre separata Razor-pages och en gemensam fil som inkluderar grundfiler såsom CSS och JavaScript.
+</p>
+<p>Jag som skapat uppgiften heter Sara Girke.</p>
+@section Scripts
+    {
+        <script>
+            $('#aboutLink').removeClass('notactive');
+            $('#aboutLink').addClass('active');
+        </script>
+}

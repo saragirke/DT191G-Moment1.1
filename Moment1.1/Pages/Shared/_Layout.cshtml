@@ -1,0 +1,77 @@
+﻿
+@{
+    var date = DateTime.Now;
+    var shortDate = date.ToShortDateString();
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment1.1</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Moment1._1.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <header>
+    
+            <div class="item1">
+                <div class="div1">
+                    <img id="img_logo" alt="Logo" src="~/Images/logotype.png" width="150" />
+                </div>
+                <div class="div2">
+                    <p>Dagens datum är: @shortDate</p>
+                </div>
+    </header>
+
+        <div class="row">
+            <div class="leftcolumn">
+                 <div class="card">
+                     <ul class="fakeimg2">
+                <li class="fakeimg notactive"><a id="homeLink" asp-area="" asp-page="/Index">Start</a></li><br>
+                    <li class="fakeimg notactive"> <a id="razorLink" asp-area="" asp-page="/Razor">Razor</a></li>
+                    <br>
+                    <li class="fakeimg notactive"><a id="aboutLink" asp-area="" asp-page="/About">Om sidan</a></li>
+                </ul>
+            </div>
+  
+             </div>
+
+
+
+            <div class="rightcolumn">
+                <div class="card">
+                    @RenderBody()
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+        <p> Av Sara Girke - Kontakta mig via e-post <a href="mailto:sagi1700@student.miun.se">sagi1700@student.miun.se</a></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: true)
+</body>
+</html>
